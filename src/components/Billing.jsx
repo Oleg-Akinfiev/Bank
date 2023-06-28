@@ -1,9 +1,38 @@
-import React from 'react'
+import React from "react";
+import styles, { layout } from "../style";
+import { apple, bill } from "../assets";
 
 const Billing = () => {
-  return (
-	 <div>Billing</div>
-  )
-}
+	return (
+		<section id="product" className={layout.sectionReverse}>
+			<div className={layout.sectionImgReverse}>
+				<img
+					src={bill}
+					alt="billing"
+					className="w-[100%] h-[100%] relative z-[5]"
+				/>
+			</div>
 
-export default Billing
+			<div className={layout.sectionInfo}>
+				<h2 className={styles.heading2}>
+					Easily control your <br className="sm:block" />
+					billing & invoicing.
+				</h2>
+				<p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+					Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio
+					aenean neque. Fusce ipsum orci rhoncus aliporttitor integer platea
+					placerat.
+				</p>
+				<div className="flex flex-row flex-wrap sm:mt-10 mt-6">
+					<img
+						src={apple}
+						alt="apple_store"
+						className="w-[128px] h-[42px] object-contain mr-5 cursor-pointer"
+					/>
+				</div>
+			</div>
+		</section>
+	);
+};
+
+export default Billing;
